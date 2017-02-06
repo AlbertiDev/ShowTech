@@ -1858,7 +1858,19 @@ h1.typo1 {
 }
 }
 
-a img.home-img{
+img.same {
 	width: 185px;
 	height: 207px;
+	/*width: 100%;*/
 }
+
+/*.btn-green, .btn-green:active, .btn-green:visited{
+	color: #FFF;    
+    background-color: #52D0C4;    
+}
+
+.btn-green:hover{
+	color: #FFF;    
+    background-color: #000;    
+}
+*/
