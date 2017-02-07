@@ -1,5 +1,3 @@
-
-<!--footer-->
 <div class="footer">	
 	<div class="footer-bottom">
 		<div class="container">
@@ -50,11 +48,7 @@
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
-				<p class="footer-class"> © 2017 Show Tech. All Rights Reserved | <a href="http://w3layouts.com/" target="_blank">W3L</a> </p>
+				<p class="footer-class"> © 2017 Show Tech. All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
 			</div>
 	</div>
 </div>
-
-<!--//footer-->
-</body>
-</html>

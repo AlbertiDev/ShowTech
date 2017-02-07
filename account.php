@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Fashion Mania A Ecommerce Category Flat Bootstarp Resposive Website Template | Checkout :: w3layouts</title>
+<title>Fashion Mania A Ecommerce Category Flat Bootstarp Resposive Website Template | Account :: w3layouts</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -49,14 +49,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</ul>
 				</div>
 				<div class="col-md-4 logo">
-					<a href="index.html"><img src="images/logo.png" alt=""></a>	
+					<a href="index.php"><img src="images/logo.png" alt=""></a>	
 				</div>
 		
 			<div class="col-md-4 header-left">		
-					<p class="log"><a href="account.html"  >Login</a>
-						<span>or</span><a  href="account.html"  >Signup</a></p>
+					<p class="log"><a href="account.php"  >Login</a>
+						<span>or</span><a  href="account.php"  >Signup</a></p>
 					<div class="cart box_1">
-						<a href="checkout.html">
+						<a href="checkout.php">
 						<h3> <div class="total">
 							<span class="simpleCart_total"></span></div>
 							<img src="images/cart.png" alt=""/></h3>
@@ -74,9 +74,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-2 number">
 					<span><i class="glyphicon glyphicon-phone"></i>085 596 234</span>
 				</div>
-	<div class="col-md-8 h_menu4">
+		  <div class="col-md-8 h_menu4">
 				<ul class="memenu skyblue">
-					  <li class=" grid"><a  href="index.html">Home</a></li>	
+					  <li class=" grid"><a  href="index.php">Home</a></li>	
 				      <li><a  href="#">Men</a>
 				      	<div class="mepanel">
 						<div class="row">
@@ -84,16 +84,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="h_nav">
 									<h4>All Clothing</h4>
 									<ul>
-										<li><a href="products.html">Shirts</a></li>
-										<li><a href="products.html">Sports Wear</a></li>
-										<li><a href="products.html">Shorts</a></li>
-										<li><a href="products.html">Suits & Blazers</a></li>
-										<li><a href="products.html">Formal Shirts</a></li>
-										<li><a href="products.html">Sweatpants</a></li>
-										<li><a href="products.html">Swimwear</a></li>
-										<li><a href="products.html">Trousers & Chinos</a></li>
-										<li><a href="products.html">T-Shirts</a></li>
-										<li><a href="products.html">Underwear & Socks</a></li>
+										<li><a href="products.php">Shirts</a></li>
+										<li><a href="products.php">Sports Wear</a></li>
+										<li><a href="products.php">Shorts</a></li>
+										<li><a href="products.php">Suits & Blazers</a></li>
+										<li><a href="products.php">Formal Shirts</a></li>
+										<li><a href="products.php">Sweatpants</a></li>
+										<li><a href="products.php">Swimwear</a></li>
+										<li><a href="products.php">Trousers & Chinos</a></li>
+										<li><a href="products.php">T-Shirts</a></li>
+										<li><a href="products.php">Underwear & Socks</a></li>
 										
 									</ul>	
 								</div>							
@@ -102,16 +102,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="h_nav">
 									<h4>Footwear</h4>
 									<ul>
-										<li><a href="products.html">Formal Shoes</a></li>
-										<li><a href="products.html">Boots</a></li>
-										<li><a href="products.html">Sports Shoes</a></li>
-										<li><a href="products.html">Casual Shoes</a></li>
-										<li><a href="products.html">Running Shoes</a></li>
-										<li><a href="products.html">Sneakers</a></li>
-										<li><a href="products.html">Loafers</a></li>
-										<li><a href="products.html">Slippers</a></li>
-										<li><a href="products.html">Sandals</a></li>
-										<li><a href="products.html">Flip-flops</a></li>
+										<li><a href="products.php">Formal Shoes</a></li>
+										<li><a href="products.php">Boots</a></li>
+										<li><a href="products.php">Sports Shoes</a></li>
+										<li><a href="products.php">Casual Shoes</a></li>
+										<li><a href="products.php">Running Shoes</a></li>
+										<li><a href="products.php">Sneakers</a></li>
+										<li><a href="products.php">Loafers</a></li>
+										<li><a href="products.php">Slippers</a></li>
+										<li><a href="products.php">Sandals</a></li>
+										<li><a href="products.php">Flip-flops</a></li>
 									
 									</ul>	
 								</div>							
@@ -120,15 +120,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="h_nav">
 									<h4>Popular Brands</h4>
 									<ul>
-										<li><a href="products.html">Levis</a></li>
-										<li><a href="products.html">Persol</a></li>
-										<li><a href="products.html">Nike</a></li>
-										<li><a href="products.html">Edwin</a></li>
-										<li><a href="products.html">New Balance</a></li>
-										<li><a href="products.html">Jack & Jones</a></li>
-										<li><a href="products.html">Paul Smith</a></li>
-										<li><a href="products.html">Ray-Ban</a></li>
-										<li><a href="products.html">Wood Wood</a></li>
+										<li><a href="products.php">Levis</a></li>
+										<li><a href="products.php">Persol</a></li>
+										<li><a href="products.php">Nike</a></li>
+										<li><a href="products.php">Edwin</a></li>
+										<li><a href="products.php">New Balance</a></li>
+										<li><a href="products.php">Jack & Jones</a></li>
+										<li><a href="products.php">Paul Smith</a></li>
+										<li><a href="products.php">Ray-Ban</a></li>
+										<li><a href="products.php">Wood Wood</a></li>
 									</ul>	
 								</div>												
 							</div>
@@ -142,16 +142,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="h_nav">
 									<h4>All Clothing</h4>
 									<ul>
-										<li><a href="products.html">Shirts & Tops</a></li>
-										<li><a href="products.html">Sports Wear</a></li>
-										<li><a href="products.html">Kurtas & Kurties</a></li>
-										<li><a href="products.html">Suits & Blazers</a></li>
-										<li><a href="products.html">Sarees</a></li>
-										<li><a href="products.html">Sweatpants</a></li>
-										<li><a href="products.html">Swimwear</a></li>
-										<li><a href="products.html">Night-Suits</a></li>
-										<li><a href="products.html">T-Shirts</a></li>
-										<li><a href="products.html">Jeans</a></li>
+										<li><a href="products.php">Shirts & Tops</a></li>
+										<li><a href="products.php">Sports Wear</a></li>
+										<li><a href="products.php">Kurtas & Kurties</a></li>
+										<li><a href="products.php">Suits & Blazers</a></li>
+										<li><a href="products.php">Sarees</a></li>
+										<li><a href="products.php">Sweatpants</a></li>
+										<li><a href="products.php">Swimwear</a></li>
+										<li><a href="products.php">Night-Suits</a></li>
+										<li><a href="products.php">T-Shirts</a></li>
+										<li><a href="products.php">Jeans</a></li>
 										
 									</ul>	
 								</div>							
@@ -160,16 +160,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="h_nav">
 									<h4>Footwear</h4>
 									<ul>
-										<li><a href="products.html">Heels</a></li>
-										<li><a href="products.html">Flats</a></li>
-										<li><a href="products.html">Sports Shoes</a></li>
-										<li><a href="products.html">Casual Shoes</a></li>
-										<li><a href="products.html">Running Shoes</a></li>
-										<li><a href="products.html">Wedges</a></li>
-										<li><a href="products.html">Boots</a></li>
-										<li><a href="products.html">Pumps</a></li>
-										<li><a href="products.html">Slippers</a></li>
-										<li><a href="products.html">Flip-flops</a></li>
+										<li><a href="products.php">Heels</a></li>
+										<li><a href="products.php">Flats</a></li>
+										<li><a href="products.php">Sports Shoes</a></li>
+										<li><a href="products.php">Casual Shoes</a></li>
+										<li><a href="products.php">Running Shoes</a></li>
+										<li><a href="products.php">Wedges</a></li>
+										<li><a href="products.php">Boots</a></li>
+										<li><a href="products.php">Pumps</a></li>
+										<li><a href="products.php">Slippers</a></li>
+										<li><a href="products.php">Flip-flops</a></li>
 									
 									</ul>
 								</div>							
@@ -178,26 +178,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="h_nav">
 									<h4>Popular Brands</h4>
 									<ul>
-										<li><a href="products.html">Levis</a></li>
-										<li><a href="products.html">Persol</a></li>
-										<li><a href="products.html">Nike</a></li>
-										<li><a href="products.html">Edwin</a></li>
-										<li><a href="products.html">New Balance</a></li>
-										<li><a href="products.html">Jack & Jones</a></li>
-										<li><a href="products.html">Paul Smith</a></li>
-										<li><a href="products.html">Ray-Ban</a></li>
-										<li><a href="products.html">Wood Wood</a></li>
+										<li><a href="products.php">Levis</a></li>
+										<li><a href="products.php">Persol</a></li>
+										<li><a href="products.php">Nike</a></li>
+										<li><a href="products.php">Edwin</a></li>
+										<li><a href="products.php">New Balance</a></li>
+										<li><a href="products.php">Jack & Jones</a></li>
+										<li><a href="products.php">Paul Smith</a></li>
+										<li><a href="products.php">Ray-Ban</a></li>
+										<li><a href="products.php">Wood Wood</a></li>
 									</ul>	
 								</div>												
 							</div>
 						  </div>
 						</div>
 			    </li>
-				<li><a  href="typo.html">Blog</a></li>				
-				<li><a class="color6" href="contact.html">Conact</a></li>
+				<li><a  href="typo.php">Blog</a></li>				
+				<li><a class="color6" href="contact.php">Conact</a></li>
 			  </ul> 
 			</div>
-				<div class="col-md-2 search">		
+		<div class="col-md-2 search">		
 			<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a>
 		</div>
 		<div class="clearfix"> </div>
@@ -236,60 +236,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </div>
 <!--//header-->
-<!---->
-<div class="container">
-	<div class="check-out">
-		<h1>Checkout</h1>
-    	    <table >
-		  <tr>
-			<th>Item</th>
-			<th>Qty</th>		
-			<th>Prices</th>
-			<th>Delery Detials</th>
-			<th>Subtotal</th>
-		  </tr>
-		  <tr>
-			<td class="ring-in"><a href="single.html" class="at-in"><img src="images/ce.jpg" class="img-responsive" alt=""></a>
-			<div class="sed">
-				<h5>Sed ut perspiciatis unde</h5>
-				<p>(At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium) </p>
-			
-			</div>
-			<div class="clearfix"> </div></td>
-			<td class="check"><input type="text" value="1" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}"></td>		
-			<td>$100.00</td>
-			<td>FREE SHIPPING</td>
-			<td>$100.00</td>
-		  </tr>
-		  <tr>
-		  <td class="ring-in"><a href="single.html" class="at-in"><img src="images/ce1.jpg" class="img-responsive" alt=""></a>
-			<div class="sed">
-				<h5>Sed ut perspiciatis unde</h5>
-				<p>(At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium ) </p>
-			</div>
-			<div class="clearfix"> </div></td>
-			<td class="check"><input type="text" value="1" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}"></td>		
-			<td>$200.00</td>
-			<td>FREE SHIPPING</td>
-			<td>$200.00</td>
-		  </tr>
-		  <tr>
-		  <td class="ring-in"><a href="single.html" class="at-in"><img src="images/ce2.jpg" class="img-responsive" alt=""></a>
-			<div class="sed">
-				<h5>Sed ut perspiciatis unde</h5>
-				<p>(At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium) </p>
-			</div>
-			<div class="clearfix"> </div></td>
-			<td class="check"><input type="text" value="1" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}"></td>		
-			<td>$150.00</td>
-			<td>FREE SHIPPING</td>
-			<td>$150.00</td>
-		  </tr>
-	</table>
-	<a href="#" class=" to-buy">PROCEED TO BUY</a>
-	<div class="clearfix"> </div>
-    </div>
+<div class="account">
+	<div class="container">
+		<h1>Account</h1>
+		<div class="account_grid">
+			   <div class="col-md-6 login-right">
+				<form>
+
+					<span>Email Address</span>
+					<input type="text"> 
+				
+					<span>Password</span>
+					<input type="text"> 
+					<div class="word-in">
+				  		<a class="forgot" href="#">Forgot Your Password?</a>
+				 		 <input type="submit" value="Login">
+				  	</div>
+			    </form>
+			   </div>	
+			    <div class="col-md-6 login-left">
+			  	 <h4>NEW CUSTOMERS</h4>
+				 <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+				 <a class="acount-btn" href="register.php">Create an Account</a>
+			   </div>
+			   <div class="clearfix"> </div>
+			 </div>
+	</div>
 </div>
+
 <!--footer-->
 <div class="footer">
 	<div class="container">

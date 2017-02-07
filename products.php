@@ -7,8 +7,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Fashion Mania A Ecommerce Category Flat Bootstarp Resposive Website Template | Single :: w3layouts</title>
+<title>Fashion Mania A Ecommerce Category Flat Bootstarp Resposive Website Template | Products :: w3layouts</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
@@ -18,7 +20,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="keywords" content="Fashion Mania Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!---->
+<!-- start menu -->
+<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/memenu.js"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+<script src="js/simpleCart.min.js"> </script>
+<!-- slide -->
 </head>
 <body>
 <!--header-->
@@ -42,14 +49,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</ul>
 				</div>
 				<div class="col-md-4 logo">
-					<a href="index.html"><img src="images/logo.png" alt=""></a>	
+					<a href="index.php"><img src="images/logo.png" alt=""></a>	
 				</div>
 		
 			<div class="col-md-4 header-left">		
-					<p class="log"><a href="account.html"  >Login</a>
-						<span>or</span><a  href="account.html"  >Signup</a></p>
+					<p class="log"><a href="account.php"  >Login</a>
+						<span>or</span><a  href="account.php"  >Signup</a></p>
 					<div class="cart box_1">
-						<a href="checkout.html">
+						<a href="checkout.php">
 						<h3> <div class="total">
 							<span class="simpleCart_total"></span></div>
 							<img src="images/cart.png" alt=""/></h3>
@@ -67,9 +74,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-2 number">
 					<span><i class="glyphicon glyphicon-phone"></i>085 596 234</span>
 				</div>
-		  <div class="col-md-8 h_menu4">
+		<div class="col-md-8 h_menu4">
 				<ul class="memenu skyblue">
-					  <li class=" grid"><a  href="index.html">Home</a></li>	
+					  <li class=" grid"><a  href="index.php">Home</a></li>	
 				      <li><a  href="#">Men</a>
 				      	<div class="mepanel">
 						<div class="row">
@@ -77,16 +84,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="h_nav">
 									<h4>All Clothing</h4>
 									<ul>
-										<li><a href="products.html">Shirts</a></li>
-										<li><a href="products.html">Sports Wear</a></li>
-										<li><a href="products.html">Shorts</a></li>
-										<li><a href="products.html">Suits & Blazers</a></li>
-										<li><a href="products.html">Formal Shirts</a></li>
-										<li><a href="products.html">Sweatpants</a></li>
-										<li><a href="products.html">Swimwear</a></li>
-										<li><a href="products.html">Trousers & Chinos</a></li>
-										<li><a href="products.html">T-Shirts</a></li>
-										<li><a href="products.html">Underwear & Socks</a></li>
+										<li><a href="products.php">Shirts</a></li>
+										<li><a href="products.php">Sports Wear</a></li>
+										<li><a href="products.php">Shorts</a></li>
+										<li><a href="products.php">Suits & Blazers</a></li>
+										<li><a href="products.php">Formal Shirts</a></li>
+										<li><a href="products.php">Sweatpants</a></li>
+										<li><a href="products.php">Swimwear</a></li>
+										<li><a href="products.php">Trousers & Chinos</a></li>
+										<li><a href="products.php">T-Shirts</a></li>
+										<li><a href="products.php">Underwear & Socks</a></li>
 										
 									</ul>	
 								</div>							
@@ -95,16 +102,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="h_nav">
 									<h4>Footwear</h4>
 									<ul>
-										<li><a href="products.html">Formal Shoes</a></li>
-										<li><a href="products.html">Boots</a></li>
-										<li><a href="products.html">Sports Shoes</a></li>
-										<li><a href="products.html">Casual Shoes</a></li>
-										<li><a href="products.html">Running Shoes</a></li>
-										<li><a href="products.html">Sneakers</a></li>
-										<li><a href="products.html">Loafers</a></li>
-										<li><a href="products.html">Slippers</a></li>
-										<li><a href="products.html">Sandals</a></li>
-										<li><a href="products.html">Flip-flops</a></li>
+										<li><a href="products.php">Formal Shoes</a></li>
+										<li><a href="products.php">Boots</a></li>
+										<li><a href="products.php">Sports Shoes</a></li>
+										<li><a href="products.php">Casual Shoes</a></li>
+										<li><a href="products.php">Running Shoes</a></li>
+										<li><a href="products.php">Sneakers</a></li>
+										<li><a href="products.php">Loafers</a></li>
+										<li><a href="products.php">Slippers</a></li>
+										<li><a href="products.php">Sandals</a></li>
+										<li><a href="products.php">Flip-flops</a></li>
 									
 									</ul>	
 								</div>							
@@ -113,15 +120,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="h_nav">
 									<h4>Popular Brands</h4>
 									<ul>
-										<li><a href="products.html">Levis</a></li>
-										<li><a href="products.html">Persol</a></li>
-										<li><a href="products.html">Nike</a></li>
-										<li><a href="products.html">Edwin</a></li>
-										<li><a href="products.html">New Balance</a></li>
-										<li><a href="products.html">Jack & Jones</a></li>
-										<li><a href="products.html">Paul Smith</a></li>
-										<li><a href="products.html">Ray-Ban</a></li>
-										<li><a href="products.html">Wood Wood</a></li>
+										<li><a href="products.php">Levis</a></li>
+										<li><a href="products.php">Persol</a></li>
+										<li><a href="products.php">Nike</a></li>
+										<li><a href="products.php">Edwin</a></li>
+										<li><a href="products.php">New Balance</a></li>
+										<li><a href="products.php">Jack & Jones</a></li>
+										<li><a href="products.php">Paul Smith</a></li>
+										<li><a href="products.php">Ray-Ban</a></li>
+										<li><a href="products.php">Wood Wood</a></li>
 									</ul>	
 								</div>												
 							</div>
@@ -135,16 +142,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="h_nav">
 									<h4>All Clothing</h4>
 									<ul>
-										<li><a href="products.html">Shirts & Tops</a></li>
-										<li><a href="products.html">Sports Wear</a></li>
-										<li><a href="products.html">Kurtas & Kurties</a></li>
-										<li><a href="products.html">Suits & Blazers</a></li>
-										<li><a href="products.html">Sarees</a></li>
-										<li><a href="products.html">Sweatpants</a></li>
-										<li><a href="products.html">Swimwear</a></li>
-										<li><a href="products.html">Night-Suits</a></li>
-										<li><a href="products.html">T-Shirts</a></li>
-										<li><a href="products.html">Jeans</a></li>
+										<li><a href="products.php">Shirts & Tops</a></li>
+										<li><a href="products.php">Sports Wear</a></li>
+										<li><a href="products.php">Kurtas & Kurties</a></li>
+										<li><a href="products.php">Suits & Blazers</a></li>
+										<li><a href="products.php">Sarees</a></li>
+										<li><a href="products.php">Sweatpants</a></li>
+										<li><a href="products.php">Swimwear</a></li>
+										<li><a href="products.php">Night-Suits</a></li>
+										<li><a href="products.php">T-Shirts</a></li>
+										<li><a href="products.php">Jeans</a></li>
 										
 									</ul>	
 								</div>							
@@ -153,16 +160,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="h_nav">
 									<h4>Footwear</h4>
 									<ul>
-										<li><a href="products.html">Heels</a></li>
-										<li><a href="products.html">Flats</a></li>
-										<li><a href="products.html">Sports Shoes</a></li>
-										<li><a href="products.html">Casual Shoes</a></li>
-										<li><a href="products.html">Running Shoes</a></li>
-										<li><a href="products.html">Wedges</a></li>
-										<li><a href="products.html">Boots</a></li>
-										<li><a href="products.html">Pumps</a></li>
-										<li><a href="products.html">Slippers</a></li>
-										<li><a href="products.html">Flip-flops</a></li>
+										<li><a href="products.php">Heels</a></li>
+										<li><a href="products.php">Flats</a></li>
+										<li><a href="products.php">Sports Shoes</a></li>
+										<li><a href="products.php">Casual Shoes</a></li>
+										<li><a href="products.php">Running Shoes</a></li>
+										<li><a href="products.php">Wedges</a></li>
+										<li><a href="products.php">Boots</a></li>
+										<li><a href="products.php">Pumps</a></li>
+										<li><a href="products.php">Slippers</a></li>
+										<li><a href="products.php">Flip-flops</a></li>
 									
 									</ul>
 								</div>							
@@ -171,29 +178,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="h_nav">
 									<h4>Popular Brands</h4>
 									<ul>
-										<li><a href="products.html">Levis</a></li>
-										<li><a href="products.html">Persol</a></li>
-										<li><a href="products.html">Nike</a></li>
-										<li><a href="products.html">Edwin</a></li>
-										<li><a href="products.html">New Balance</a></li>
-										<li><a href="products.html">Jack & Jones</a></li>
-										<li><a href="products.html">Paul Smith</a></li>
-										<li><a href="products.html">Ray-Ban</a></li>
-										<li><a href="products.html">Wood Wood</a></li>
+										<li><a href="products.php">Levis</a></li>
+										<li><a href="products.php">Persol</a></li>
+										<li><a href="products.php">Nike</a></li>
+										<li><a href="products.php">Edwin</a></li>
+										<li><a href="products.php">New Balance</a></li>
+										<li><a href="products.php">Jack & Jones</a></li>
+										<li><a href="products.php">Paul Smith</a></li>
+										<li><a href="products.php">Ray-Ban</a></li>
+										<li><a href="products.php">Wood Wood</a></li>
 									</ul>	
 								</div>												
 							</div>
 						  </div>
 						</div>
 			    </li>
-				<li><a  href="typo.html">Blog</a></li>				
-				<li><a class="color6" href="contact.html">Conact</a></li>
+				<li><a  href="typo.php">Blog</a></li>				
+				<li><a class="color6" href="contact.php">Conact</a></li>
 			  </ul> 
 			</div>
 				<div class="col-md-2 search">		
 			<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a>
 		</div>
 		<div class="clearfix"> </div>
+			<!---pop-up-box---->
+					  <script type="text/javascript" src="js/modernizr.custom.min.js"></script>    
+					<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+					<!---//pop-up-box---->
 				<div id="small-dialog" class="mfp-hide">
 				<div class="search-top">
 						<div class="login">
@@ -202,81 +214,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<p>	Shopping</p>
 					</div>				
-				</div>		
+				</div>
+				 <script>
+						$(document).ready(function() {
+						$('.popup-with-zoom-anim').magnificPopup({
+							type: 'inline',
+							fixedContentPos: false,
+							fixedBgPos: true,
+							overflowY: 'auto',
+							closeBtnInside: true,
+							preloader: false,
+							midClick: true,
+							removalDelay: 300,
+							mainClass: 'my-mfp-zoom-in'
+						});
+																						
+						});
+				</script>			
 	<!---->		
 		</div>
 	</div>
 </div>
-<!---->
-<div class="single">
-
-<div class="container">
-<div class="col-md-9">
-	<div class="col-md-5 grid">		
-		<div class="flexslider">
-			  <ul class="slides">
-			    <li data-thumb="images/si.jpg">
-			        <div class="thumb-image"> <img src="images/si.jpg" data-imagezoom="true" class="img-responsive"> </div>
-			    </li>
-			    <li data-thumb="images/si1.jpg">
-			         <div class="thumb-image"> <img src="images/si1.jpg" data-imagezoom="true" class="img-responsive"> </div>
-			    </li>
-			    <li data-thumb="images/si2.jpg">
-			       <div class="thumb-image"> <img src="images/si2.jpg" data-imagezoom="true" class="img-responsive"> </div>
-			    </li> 
-			  </ul>
-		</div>
-	</div>	
-<div class="col-md-7 single-top-in">
-						<div class="single-para simpleCart_shelfItem">
-							<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h1>
-							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-							<div class="star-on">
-								<ul>
-									<li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-									<li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
-								</ul>
-								<div class="review">
-									<a href="#"> 3 reviews </a>/
-									<a href="#">  Write a review</a>
-								</div>
-							<div class="clearfix"> </div>
-							</div>
-							
-								<label  class="add-to item_price">$32.8</label>
-							
-							<div class="available">
-								<h6>Available Options :</h6>
-								<ul>
-									
-								<li>Size:<select>
-									<option>Large</option>
-									<option>Medium</option>
-									<option>small</option>
-									<option>Large</option>
-									<option>small</option>
-								</select></li>
-								<li>Cost:
-										<select>
-										<option>U.S.Dollar</option>
-										<option>Euro</option>
-									</select></li>
-							</ul>
-						</div>
-								<a href="#" class="cart item_add">More details</a>
-						</div>
-					</div>
-			<div class="clearfix"> </div>
+<!--content-->
+<div class="products">
+	<div class="container">
+		<h1>Products</h1>
+		<div class="col-md-9">
 			<div class="content-top1">
 				<div class="col-md-4 col-md3">
 					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="images/pi6.png" alt="" />
+						<a href="single.php">
+							<img class="img-responsive" src="images/pi.png" alt="" />
 						</a>
-						<h3><a href="single.html">Jeans</a></h3>
+						<h3><a href="single.php">Tops</a></h3>
 						<div class="price">
 								<h5 class="item_price">$300</h5>
 								<a href="#" class="item_add">Add To Cart</a>
@@ -286,10 +256,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-4 col-md3">
 					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="images/pi7.png" alt="" />
+						<a href="single.php">
+							<img class="img-responsive" src="images/pi2.png" alt="" />
 						</a>
-						<h3><a href="single.html">Tops</a></h3>
+						<h3><a href="single.php">T-Shirt</a></h3>
 						<div class="price">
 								<h5 class="item_price">$300</h5>
 								<a href="#" class="item_add">Add To Cart</a>
@@ -300,10 +270,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			<div class="col-md-4 col-md3">
 					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="images/pi.png" alt="" />
+						<a href="single.php">
+							<img class="img-responsive" src="images/pi4.png" alt="" />
 						</a>
-						<h3><a href="single.html">Tops</a></h3>
+						<h3><a href="single.php">Shirt</a></h3>
 						<div class="price">
 								<h5 class="item_price">$300</h5>
 								<a href="#" class="item_add">Add To Cart</a>
@@ -314,48 +284,137 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>	
 			
 			<div class="clearfix"> </div>
-			</div>		
-</div>
-<!----->
-<div class="col-md-3 product-bottom">
+			</div>	
+			<div class="content-top1">
+				<div class="col-md-4 col-md3">
+					<div class="col-md1 simpleCart_shelfItem">
+						<a href="single.php">
+							<img class="img-responsive" src="images/pi1.png" alt="" />
+						</a>
+						<h3><a href="single.php">Tops</a></h3>
+						<div class="price">
+								<h5 class="item_price">$300</h5>
+								<a href="#" class="item_add">Add To Cart</a>
+								<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>	
+			<div class="col-md-4 col-md3">
+					<div class="col-md1 simpleCart_shelfItem">
+						<a href="single.php">
+							<img class="img-responsive" src="images/pi3.png" alt="" />
+						</a>
+						<h3><a href="single.php">T-Shirt</a></h3>
+						<div class="price">
+								<h5 class="item_price">$300</h5>
+								<a href="#" class="item_add">Add To Cart</a>
+								<div class="clearfix"> </div>
+						</div>
+						
+					</div>
+				</div>	
+			<div class="col-md-4 col-md3">
+					<div class="col-md1 simpleCart_shelfItem">
+						<a href="single.php">
+							<img class="img-responsive" src="images/pi5.png" alt="" />
+						</a>
+						<h3><a href="single.php">T-Shirt</a></h3>
+						<div class="price">
+								<h5 class="item_price">$300</h5>
+								<a href="#" class="item_add">Add To Cart</a>
+								<div class="clearfix"> </div>
+						</div>
+						
+					</div>
+				</div>	
+			
+			<div class="clearfix"> </div>
+			</div>	
+			<div class="content-top1">
+				<div class="col-md-4 col-md3">
+					<div class="col-md1 simpleCart_shelfItem">
+						<a href="single.php">
+							<img class="img-responsive" src="images/pi6.png" alt="" />
+						</a>
+						<h3><a href="single.php">Jeans</a></h3>
+						<div class="price">
+								<h5 class="item_price">$300</h5>
+								<a href="#" class="item_add">Add To Cart</a>
+								<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>	
+			<div class="col-md-4 col-md3">
+					<div class="col-md1 simpleCart_shelfItem">
+						<a href="single.php">
+							<img class="img-responsive" src="images/pi7.png" alt="" />
+						</a>
+						<h3><a href="single.php">Tops</a></h3>
+						<div class="price">
+								<h5 class="item_price">$300</h5>
+								<a href="#" class="item_add">Add To Cart</a>
+								<div class="clearfix"> </div>
+						</div>
+						
+					</div>
+				</div>	
+			<div class="col-md-4 col-md3">
+					<div class="col-md1 simpleCart_shelfItem">
+						<a href="single.php">
+							<img class="img-responsive" src="images/pi.png" alt="" />
+						</a>
+						<h3><a href="single.php">Tops</a></h3>
+						<div class="price">
+								<h5 class="item_price">$300</h5>
+								<a href="#" class="item_add">Add To Cart</a>
+								<div class="clearfix"> </div>
+						</div>
+						
+					</div>
+				</div>	
+			
+			<div class="clearfix"> </div>
+			</div>	
+		</div>
+		<div class="col-md-3 product-bottom">
 			<!--categories-->
 				<div class=" rsidebar span_1_of_left">
 						<h3 class="cate">Categories</h3>
 							 <ul class="menu-drop">
 							<li class="item1"><a href="#">Men </a>
 								<ul class="cute">
-									<li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-									<li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-									<li class="subitem3"><a href="single.html">Automatic Fails </a></li>
+									<li class="subitem1"><a href="single.php">Cute Kittens </a></li>
+									<li class="subitem2"><a href="single.php">Strange Stuff </a></li>
+									<li class="subitem3"><a href="single.php">Automatic Fails </a></li>
 								</ul>
 							</li>
 							<li class="item2"><a href="#">Women </a>
 								<ul class="cute">
-									<li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-									<li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-									<li class="subitem3"><a href="single.html">Automatic Fails </a></li>
+									<li class="subitem1"><a href="single.php">Cute Kittens </a></li>
+									<li class="subitem2"><a href="single.php">Strange Stuff </a></li>
+									<li class="subitem3"><a href="single.php">Automatic Fails </a></li>
 								</ul>
 							</li>
 							<li class="item3"><a href="#">Kids</a>
 								<ul class="cute">
-									<li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-									<li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-									<li class="subitem3"><a href="single.html">Automatic Fails</a></li>
+									<li class="subitem1"><a href="single.php">Cute Kittens </a></li>
+									<li class="subitem2"><a href="single.php">Strange Stuff </a></li>
+									<li class="subitem3"><a href="single.php">Automatic Fails</a></li>
 								</ul>
 							</li>
 							<li class="item4"><a href="#">Accesories</a>
 								<ul class="cute">
-									<li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-									<li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-									<li class="subitem3"><a href="single.html">Automatic Fails</a></li>
+									<li class="subitem1"><a href="single.php">Cute Kittens </a></li>
+									<li class="subitem2"><a href="single.php">Strange Stuff </a></li>
+									<li class="subitem3"><a href="single.php">Automatic Fails</a></li>
 								</ul>
 							</li>
 									
 							<li class="item4"><a href="#">Shoes</a>
 								<ul class="cute">
-									<li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-									<li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-									<li class="subitem3"><a href="single.html">Automatic Fails </a></li>
+									<li class="subitem1"><a href="product.php">Cute Kittens </a></li>
+									<li class="subitem2"><a href="product.php">Strange Stuff </a></li>
+									<li class="subitem3"><a href="product.php">Automatic Fails </a></li>
 								</ul>
 							</li>
 						</ul>
@@ -386,40 +445,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h3 class="cate">Best Sellers</h3>
 					<div class="product-go">
 						<div class=" fashion-grid">
-							<a href="single.html"><img class="img-responsive " src="images/pr.jpg" alt=""></a>	
+							<a href="single.php"><img class="img-responsive " src="images/pr.jpg" alt=""></a>	
 						</div>
 						<div class=" fashion-grid1">
-							<h6 class="best2"><a href="single.html" >Lorem ipsum dolor sitamet consectetuer  </a></h6>
+							<h6 class="best2"><a href="single.php" >Lorem ipsum dolor sitamet consectetuer  </a></h6>
 							<span class=" price-in1"> $40.00</span>
 						</div>	
 						<div class="clearfix"> </div>
 					</div>
 					<div class="product-go">
 						<div class=" fashion-grid">
-							<a href="single.html"><img class="img-responsive " src="images/pr1.jpg" alt=""></a>	
+							<a href="single.php"><img class="img-responsive " src="images/pr1.jpg" alt=""></a>	
 						</div>
 						<div class=" fashion-grid1">
-							<h6 class="best2"><a href="single.html" >Lorem ipsum dolor sitamet consectetuer  </a></h6>
+							<h6 class="best2"><a href="single.php" >Lorem ipsum dolor sitamet consectetuer  </a></h6>
 							<span class=" price-in1"> $40.00</span>
 						</div>	
 						<div class="clearfix"> </div>
 					</div>
 					<div class="product-go">
 						<div class=" fashion-grid">
-							<a href="single.html"><img class="img-responsive " src="images/pr2.jpg" alt=""></a>	
+							<a href="single.php"><img class="img-responsive " src="images/pr2.jpg" alt=""></a>	
 						</div>
 						<div class=" fashion-grid1">
-							<h6 class="best2"><a href="single.html" >Lorem ipsum dolor sitamet consectetuer  </a></h6>
+							<h6 class="best2"><a href="single.php" >Lorem ipsum dolor sitamet consectetuer  </a></h6>
 							<span class=" price-in1"> $40.00</span>
 						</div>	
 						<div class="clearfix"> </div>
 					</div>	
 					<div class="product-go">
 						<div class=" fashion-grid">
-							<a href="single.html"><img class="img-responsive " src="images/pr3.jpg" alt=""></a>	
+							<a href="single.php"><img class="img-responsive " src="images/pr3.jpg" alt=""></a>	
 						</div>
 						<div class=" fashion-grid1">
-							<h6 class="best2"><a href="single.html" >Lorem ipsum dolor sitamet consectetuer  </a></h6>
+							<h6 class="best2"><a href="single.php" >Lorem ipsum dolor sitamet consectetuer  </a></h6>
 							<span class=" price-in1"> $40.00</span>
 						</div>	
 						<div class="clearfix"> </div>
@@ -451,7 +510,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="clearfix"> </div>
 	</div>
-	</div>
+</div>
+<!--//content-->
 <!--footer-->
 <div class="footer">
 	<div class="container">
@@ -522,66 +582,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 	</div>
 </div>
-<!-- slide -->
-<script src="js/jquery.min.js"></script>
-<script src="js/imagezoom.js"></script>
-<!-- start menu -->
-<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="js/memenu.js"></script>
-<script>$(document).ready(function(){$(".memenu").memenu();});</script>
-<script src="js/simpleCart.min.js"> </script>
-<!--initiate accordion-->
-						<script type="text/javascript">
-							$(function() {
-							    var menu_ul = $('.menu-drop > li > ul'),
-							           menu_a  = $('.menu-drop > li > a');
-							    menu_ul.hide();
-							    menu_a.click(function(e) {
-							        e.preventDefault();
-							        if(!$(this).hasClass('active')) {
-							            menu_a.removeClass('active');
-							            menu_ul.filter(':visible').slideUp('normal');
-							            $(this).addClass('active').next().stop(true,true).slideDown('normal');
-							        } else {
-							            $(this).removeClass('active');
-							            $(this).next().stop(true,true).slideUp('normal');
-							        }
-							    });
-							
-							});
-						</script>
-						<!-- FlexSlider -->
-  <script defer src="js/jquery.flexslider.js"></script>
-<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 
-<script>
-// Can also be used with $(document).ready()
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "slide",
-    controlNav: "thumbnails"
-  });
-});
-</script>
-<!---pop-up-box---->
-					<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
-					<!---//pop-up-box---->
-					 <script>
-						$(document).ready(function() {
-						$('.popup-with-zoom-anim').magnificPopup({
-							type: 'inline',
-							fixedContentPos: false,
-							fixedBgPos: true,
-							overflowY: 'auto',
-							closeBtnInside: true,
-							preloader: false,
-							midClick: true,
-							removalDelay: 300,
-							mainClass: 'my-mfp-zoom-in'
-						});
-																						
-						});
-				</script>	
+<!--//footer-->
 </body>
 </html>
