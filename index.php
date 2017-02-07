@@ -1,8 +1,10 @@
 <!-- include head scripts -->
-<?php include 'include/head.php'; include 'include/scripts.php'; ?>
+<?php
+	require_once 'assets/conn.php';
+	include 'include/head.php'; include 'include/scripts.php'; ?>
 <!-- //head scripts -->
 
-<body><!-- body -->
+<!-- body -->
 
 <!-- include header banner-->
 <?php include 'include/header.php';  include 'include/banner.php'; ?>
@@ -134,8 +136,8 @@
 <!--//content-->
 
 <!-- include footer Details-Modal-->
-<?php include 'include/footer.php';  include 'include/details.php'; ?>
+<?php include 'include/footer.php'; include 'include/details.php';     ?>
 <!--//footer Details-Modal-->
 
-</body><!-- //body -->
-</html><!-- //html -->
+<!-- //body -->
+<!-- //html -->
