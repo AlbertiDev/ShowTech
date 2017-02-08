@@ -1859,9 +1859,10 @@ h1.typo1 {
 }
 
 img.same {
-	width: 185px;
+	/*width: 185px;*/
 	height: 207px;
 	/*width: 100%;*/
+	padding-bottom: 7px;
 }
 
 /*.btn-green, .btn-green:active, .btn-green:visited{
