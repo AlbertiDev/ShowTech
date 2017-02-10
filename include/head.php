@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Show Tech | Home</title>
+<title>Show Tech</title>
 <!-- Bootstrap.css --><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
 <!-- Custom Theme files -->
 <!--theme-style--><link href="css/style.css" rel="stylesheet" type="text/css" media="all" /><!--//theme-style-->

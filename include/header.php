@@ -11,11 +11,11 @@
 						<span>or</span><a  href="account.php"  >Signup</a></p>
 					<div class="cart box_1">
 						<a href="checkout.php">
-						<h3> <div class="total">
+						<h3>$0.00<div class="total">
 							<span class="simpleCart_total"></span></div>
-							<img src="images/cart.png" alt=""/></h3>
+							<img src="images/cart.png" alt="cart"/></h3>
 						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+						<p><a href="#" class="simpleCart_empty">Empty Cart</a></p>
 
 					</div>
 					<div class="clearfix"> </div>
@@ -30,11 +30,11 @@
 			<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a>
 		</div>
 		<div class="clearfix"> </div>
-			<!---pop-up-box---->
+			<!---pop-up-box-->
 					     
 					<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
 					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
-					<!---//pop-up-box---->
+					<!---//pop-up-box-->
 				<div id="small-dialog" class="mfp-hide">
 				<div class="search-top">
 						<div class="login">

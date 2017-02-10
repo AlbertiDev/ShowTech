@@ -26,7 +26,7 @@
 							<h3><?= $product['title']; ?></h3>
 							<div class="price">
 									<h5 class="item_price">$<?= $product['price']; ?></h5>
-									<a href="#" class="item_add"  data-toggle="modal" data-target="#details-1">More details</a>
+									<a href="#" class="item_add" onclick="detailsmodal(<?php echo $product['id']; ?>);return false;">More details</a>
 									<div class="clearfix"> </div>
 							</div>
 						</div>
