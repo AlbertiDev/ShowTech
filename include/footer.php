@@ -53,5 +53,23 @@
 	</div>
 </div>
 
+<script>
+	function detailsmodal(id){
+		var data = {"id":id};
+		jQuery.ajax({
+			url : <?= BASEURL; ?>+ 'include/details.php',
+			method : "post",
+			data : data,
+			success : function (data) {
+				jQuery('body').append(data);
+				jQuery('#details-md').modal('toggle');
+			},
+			error : function () {
+				alert("error 404");
+			}
+		});
+	}
+</script>
+
 </body>
 </html>
