@@ -22,11 +22,11 @@
 				<?php while ($product = mysqli_fetch_assoc($featuredp)): ?>
 					<div class="col-md-3 col-md2">
 						<div class="col-md1 simpleCart_shelfItem">						
-								<a><img class="img-responsive same" src="<?php echo $product['image']; ?>" alt="<?= $product['title']; ?>" data-toggle="modal" data-target="#details-1"/></a>					
+								<a href="javascript:void(0)" onclick="detailsmodal(<?= $product['id']; ?>);return false;"><img class="img-responsive same" src="<?php echo $product['image']; ?>" alt="<?= $product['title']; ?>"/></a>		
 							<h3><?= $product['title']; ?></h3>
 							<div class="price">
 									<h5 class="item_price">$<?= $product['price']; ?></h5>
-									<a href="#" class="item_add" onclick="detailsmodal(<?php echo $product['id']; ?>);return false;">More details</a>
+									<a href="javascript:void(0)" class="item_add" onclick="detailsmodal(<?= $product['id']; ?>);return false;">More details</a>
 									<div class="clearfix"> </div>
 							</div>
 						</div>
@@ -40,7 +40,7 @@
 <!--//content-->
 
 <!-- include footer Details-Modal-->
-<?php include 'include/footer.php'; include 'include/details.php';     ?>
+<?php include 'include/footer.php';?>
 <!--//footer Details-Modal-->
 
 <!-- //body -->
