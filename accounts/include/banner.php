@@ -11,7 +11,7 @@
 	       			 </li>
 			 		 <li>
 	          			<img src="images/2.jpg" alt="">   
-	       			 </li>	
+	       			 </li>					 
 	      		</ul>
 	 	 	</div>
 		</div>
