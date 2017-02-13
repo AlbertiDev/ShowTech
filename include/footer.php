@@ -57,7 +57,7 @@
 	function detailsmodal(id){
 		var data = {"id":id};
 		jQuery.ajax({
-			url : <?= BASEURL; ?>+ 'include/details.php',
+			url : '/showtech/include/details.php',
 			method : "post",
 			data : data,
 			success : function (data) {

@@ -4,5 +4,5 @@ if (mysqli_connect_errno()) {
 	echo "Error: ".mysqli_connect_error();
 	die();
 }
-
-define('BASEURL', '/ShowTech/');
+require_once $_SERVER['DOCUMENT_ROOT'].'/showtech/config.php';
+require_once BASEURL.'halpers/halpers.php';
