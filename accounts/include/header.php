@@ -25,10 +25,7 @@
 	</div>
 		<div class="container">
 			<div class="head-top">				
-			 <?php include 'menu.php'; ?>
-				<div class="col-sm-2 search">		
-			<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a>
-		</div>
+			 <?php include 'menu.php'; ?>				
 		<div class="clearfix"> </div>
 			<!---pop-up-box-->
 					     
