@@ -6,8 +6,19 @@
  	$sql = "SELECT * FROM categories WHERE parent = 0";
  	$res = $db->query($sql);
  	$errors = array();
+ 	$category = '';
+ 	$post_parent = '';
 
- 	//delete brand
+ 	//edit categories
+if (isset($_GET['edit']) && !empty($_GET['edit'])) {
+    $edit_id = (int)$_GET['edit'];
+    $edit_id = sanitaze($edit_id);
+    $sqle = "SELECT * FROM categories WHERE id = '$edit_id'";
+    $edit_res = $db->query($sqle);
+    $ecategory = mysqli_fetch_assoc($edit_res);  	
+}
+
+ 	//delete categories
 	if (isset($_GET['delete']) && !empty($_GET['delete'])) {
 	    $del_id = (int)$_GET['delete'];
 	    $del_id = sanitaze($del_id);
@@ -26,9 +37,13 @@
 
  	// proces form data
  	if(isset($_POST) && !empty($_POST)){
- 		$parent = sanitaze($_POST['parent']);
+ 		$post_parent = sanitaze($_POST['parent']);
  		$category = sanitaze($_POST['category']);
- 		$sqlform = "SELECT * FROM categories WHERE category = '$category' AND parent ='$parent'";
+ 		$sqlform = "SELECT * FROM categories WHERE category = '$category' AND parent ='$post_parent'";
+ 		if (isset($_GET['edit'])) {
+ 			$id_e = $ecategory['id'];
+        	$sql = "SELECT * FROM categories WHERE category = '$category' AND id != '$id_e' AND parent ='$post_parent'";
+    	}
  		$fres = $db->query($sqlform);
  		$count = mysqli_num_rows($fres);
  		// if category is empty
@@ -44,12 +59,27 @@
         echo display_errors($errors);
     	} else{
     		// update db
-    		$updatedb = "INSERT INTO categories(category, parent) VALUES ('$category','$parent')";
+    		$updatedb = "INSERT INTO categories(category, parent) VALUES ('$category','$post_parent')";
+    		if (isset($_GET['edit'])) {
+            $updatedb = "UPDATE categories SET category = '$category', parent = $post_parent WHERE id = $edit_id";
+        }
     		$db->query($updatedb);
     		header('location: categories.php');
     	}
  	}
- 	?>
+ 	$category_value = '';
+ 	$parent_value = 0;
+ 	if (isset($_GET['edit'])) {
+ 		$category_value = $ecategory['category'];
+ 		$parent_value = $ecategory['parent'];
+ 	}else{
+ 		if(isset($_POST)){
+ 			$category_value = $category;
+ 			$parent_value = $post_parent;
+ 		}
+ 	}
+
+ ?>
  <div class="container">
     <div class="content-top">        
         <h1>
@@ -57,28 +87,31 @@
         </h1>
         <div class="row">
         	<div class="col-md-6">
-        		<form class="form" action="categories.php" method="post">
+        		<form class="form" action="categories.php<?=((isset($_GET['edit']))?'?edit='.$edit_id:'');?>" method="post">
 	                <fieldset>
-	                	<legend>Add a Category</legend>
+	                	<legend><?=((isset($_GET['edit']))?'Edit':'Add a');?> Category</legend>
 	                    <div class="form-group">
 	                    	<label class=" control-label" for="parent">Parent</label>
 							  <div>
 							    <select id="parent" name="parent" class="form-control">
-							      <option value="0">Parent</option>
+							      <option value="0" <?= (($parent_value==0)?' selected="selected"':''); ?> >Parent</option>
 							      <?php
 							      $sqlp = "SELECT * FROM categories WHERE parent = 0"; $resp = $db->query($sqlp);
 							       while ($parent = mysqli_fetch_assoc($resp)) : ?>
-							      <option value="<?= $parent['id'];?>"><?= $parent['category'];?></option>
+							      <option value="<?= $parent['id'];?>" <?= (($parent_value == $parent['id'])?' selected="selected"':''); ?> ><?= $parent['category'];?></option>
 							      <?php endwhile;?>							      	
 							    </select>
 							  </div>
 	                    </div>
 	                    <div class="form-group">
 						  <label class="control-label" for="category">Category</label>  
-						  <input id="category" name="category" type="text" placeholder="Type a category" class="form-control input-md">						  
+						  <input id="category" name="category" type="text" value="<?= $category_value?>" placeholder="Type a category" class="form-control input-md">						  
 						</div>
 						<div class="form-group">
-						  <input type="submit" value="Add Category" class="btn btn-success">						  
+						  <?php if(isset($_GET['edit'])):?>
+                        		<a href="categories.php" class="btn btn-default">Cancel</a>
+                        	<?php endif;?>
+						  <input type="submit" value="<?=((isset($_GET['edit']))?'Edit':'Add');?> Category" class="btn btn-success">						  
 						</div>						   
 	                </fieldset>
             	</form>
