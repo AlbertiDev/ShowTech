@@ -37,7 +37,7 @@
 									<div class="clearfix"> </div>
 								</div>
 								<hr>
-								<label  class="add-to item_price">$<?= $product['price']; ?></label>
+								<label  class="add-to item_price"><?= $product['price']; ?> <span class="glyphicon glyphicon-euro"></span></label>
 								
 								<form action="add_cart.php" method="post">
 									<h4>Available :</h4>

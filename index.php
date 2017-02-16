@@ -25,7 +25,7 @@
 								<a href="javascript:void(0)" onclick="detailsmodal(<?= $product['id']; ?>);return false;"><img class="img-responsive same" src="<?php echo $product['image']; ?>" alt="<?= $product['title']; ?>"/></a>		
 							<h3><?= $product['title']; ?></h3>
 							<div class="price">
-									<h5 class="item_price">$<?= $product['price']; ?></h5>
+									<h5 class="item_price"><?= $product['price']; ?> <span class="glyphicon glyphicon-euro"></span></h5>
 									<a href="javascript:void(0)" class="item_add" onclick="detailsmodal(<?= $product['id']; ?>);return false;">More details</a>
 									<div class="clearfix"> </div>
 							</div>

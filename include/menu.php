@@ -10,7 +10,7 @@ $rez = $db->query($sql);
 						  		$sql2 = "SELECT * FROM categories WHERE parent = '$parent_id'";
 						  		$rez2 = $db->query($sql2);
 						  		 ?>
-					      <li><a  href="#"><?php echo $parent['category']; ?></a>					      	
+					      <li><a  href="javascript:void(0)"><?php echo $parent['category']; ?></a>					      	
 						      	<div class="mepanel">								
 									<div class="row">
 										<div class="col6">
