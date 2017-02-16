@@ -87,34 +87,36 @@ if (isset($_GET['edit']) && !empty($_GET['edit'])) {
         </h1>
         <div class="row">
         	<div class="col-md-6">
-        		<form class="form" action="categories.php<?=((isset($_GET['edit']))?'?edit='.$edit_id:'');?>" method="post">
-	                <fieldset>
-	                	<legend><?=((isset($_GET['edit']))?'Edit':'Add a');?> Category</legend>
-	                    <div class="form-group">
-	                    	<label class=" control-label" for="parent">Parent</label>
-							  <div>
-							    <select id="parent" name="parent" class="form-control">
-							      <option value="0" <?= (($parent_value==0)?' selected="selected"':''); ?> >Parent</option>
-							      <?php
-							      $sqlp = "SELECT * FROM categories WHERE parent = 0"; $resp = $db->query($sqlp);
-							       while ($parent = mysqli_fetch_assoc($resp)) : ?>
-							      <option value="<?= $parent['id'];?>" <?= (($parent_value == $parent['id'])?' selected="selected"':''); ?> ><?= $parent['category'];?></option>
-							      <?php endwhile;?>							      	
-							    </select>
-							  </div>
-	                    </div>
-	                    <div class="form-group">
-						  <label class="control-label" for="category">Category</label>  
-						  <input id="category" name="category" type="text" value="<?= $category_value?>" placeholder="Type a category" class="form-control input-md">						  
-						</div>
-						<div class="form-group">
-						  <?php if(isset($_GET['edit'])):?>
-                        		<a href="categories.php" class="btn btn-default">Cancel</a>
-                        	<?php endif;?>
-						  <input type="submit" value="<?=((isset($_GET['edit']))?'Edit':'Add');?> Category" class="btn btn-success">						  
+	               <div class="panel panel-<?=((isset($_GET['edit']))?'info':'default');?>">
+	                	<div class="panel-heading"><h3 class="panel-title"><?=((isset($_GET['edit']))?'Edit':'Add a');?> Category</h3></div>
+	                    <div class="panel-body">
+	        				<form class="form" action="categories.php<?=((isset($_GET['edit']))?'?edit='.$edit_id:'');?>" method="post">
+			                    <div class="form-group">
+			                    	<label class=" control-label" for="parent">Parent</label>
+									  <div>
+									    <select id="parent" name="parent" class="form-control">
+									      <option value="0" <?= (($parent_value==0)?' selected="selected"':''); ?> >Parent</option>
+									      <?php
+									      $sqlp = "SELECT * FROM categories WHERE parent = 0"; $resp = $db->query($sqlp);
+									       while ($parent = mysqli_fetch_assoc($resp)) : ?>
+									      <option value="<?= $parent['id'];?>" <?= (($parent_value == $parent['id'])?' selected="selected"':''); ?> ><?= $parent['category'];?></option>
+									      <?php endwhile;?>							      	
+									    </select>
+									  </div>
+			                    </div>
+			                    <div class="form-group">
+								  <label class="control-label" for="category">Category</label>  
+								  <input id="category" name="category" type="text" value="<?= $category_value?>" placeholder="Type a category" class="form-control input-md">						  
+								</div>
+								<div class="form-group">
+								  <?php if(isset($_GET['edit'])):?>
+		                        		<a href="categories.php" class="btn btn-default">Cancel</a>
+		                        	<?php endif;?>
+								  <input type="submit" value="<?=((isset($_GET['edit']))?'Edit':'Add');?> Category" class="btn btn-success">						  
+								</div>
+							</form>
 						</div>						   
-	                </fieldset>
-            	</form>
+	                </div>            	
         	</div>
 
         	<div class="col-md-6">
