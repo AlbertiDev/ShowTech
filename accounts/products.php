@@ -2,7 +2,51 @@
 require_once $_SERVER['DOCUMENT_ROOT'].'/showtech/assets/conn.php';
 	include 'include/head.php'; include 'include/scripts.php'; 
  	include 'include/header.php';
+ 	if (isset($_GET['add'])) { 
+ 		$brandQuery = $db->query("SELECT * FROM brand ORDER BY brand");
+ 		$parentQuery = $db->query("SELECT * FROM categories WHERE parent == 0 ORDER BY category");
+ 		?>
+ 	<div class="container">
+	    <div class="content-top">        
+	        <h1>
+	            Add Product
+	        </h1>
+	        <hr>
+	        <form action="products.php?add=1" method="POST" enctype="multipart/form-data">
+	        	<fieldset>
 
+					<!-- Text input-->
+					<div class="form-group col-md-3">
+					  <label class="control-label" for="title">Title*:</label>
+					  <input id="title" name="title" type="text" placeholder="Type a title" 
+					  class="form-control input-md" required="" value="<?= isset($_POST['title'])?sanitaze($_POST['title']):'' ?>">
+					</div>
+					<div class="form-group col-md-3">
+						<label class="control-label" for="brand">Brand*:</label>
+						<select id="brand" name="brand" class="form-control">
+					      <option value="<?= ((isset($_POST['brand']) && $_POST['brand'] == '')?' selected':''); ?>"></option>
+					      <?php while($brand = mysqli_fetch_assoc($brandQuery)): ?>
+					      	<option value="<?= $brand['id'] ?>" <?= ((isset($_POST['brand']) && $_POST['brand'] == $brand['id'])?' selected':''); ?>><?= $brand['brand'] ?></option>
+					      <?php endwhile; ?>
+					    </select>
+					</div>
+					<div class="form-group col-md-3">
+						<label class="control-label" for="category">category*:</label>
+						<select id="category" name="category" class="form-control">
+					      <option value="<?= ((isset($_POST['category']) && $_POST['category'] == '')?' selected':''); ?>"></option>
+					      <?php while($category = mysqli_fetch_assoc($parentQuery)): ?>
+					      	<option value="<?= $category['id'] ?>" <?= ((isset($_POST['category']) && $_POST['category'] == $category['id'])?' selected':''); ?>><?= $category['category'] ?></option>
+					      <?php endwhile; ?>
+					    </select>
+					</div>
+				</fieldset>
+	        </form>
+	     </div>
+     </div>
+
+ <?php		
+ 	}else{
+ 		
 $sql = "SELECT * FROM products WHERE deleted = 0";
 $products = $db->query($sql);
 
@@ -22,6 +66,8 @@ if (isset($_GET['featured'])) {
         <h1>
             Products
         </h1>
+        <a href="products.php?add=1" class="btn btn-success pull-right">Add Product</a><div class="clearfix"> </div>
+        <hr>
         <table class="table table-bordered table-hover table-responsive">
 			<thead>
 				<tr>
@@ -93,4 +139,4 @@ if (isset($_GET['featured'])) {
     </div>
 </div>
 
- <?php include 'include/footer.php';?>
+ <?php } include 'include/footer.php';?>
