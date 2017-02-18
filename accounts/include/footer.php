@@ -5,24 +5,21 @@
 			</div>
 	</div>
 </div>
-
-<script>
-	function detailsmodal(id){
-		var data = {"id":id};
-		jQuery.ajax({
-			url : <?= BASEURL; ?>+ 'include/details.php',
-			method : "post",
-			data : data,
-			success : function (data) {
-				jQuery('body').append(data);
-				jQuery('#details-md').modal('toggle');
-			},
-			error : function () {
-				alert("error 404");
-			}
-		});
-	}
-</script>
+ <script>
+  function get_child_options(){
+   var parentID = jQuery('#parent').val();
+   jQuery.ajax({
+    url: '/showtech/accounts/parsers/child_ctg.php',
+    type: 'POST',
+    data: {parentID : parentID},
+    success: function(data){
+     jQuery('#child').html(data);
+    },
+     error: function(){alert("Something went wrong with the child options.")},
+   });
+  }
+  jQuery('select[name="parent"]').change(get_child_options);
+ </script>
 
 </body>
 </html>
