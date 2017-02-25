@@ -243,6 +243,7 @@ if(isset($_GET['add']) || isset($_GET['edit'])) {
                 <a class="btn btn-xs btn-danger" href="products.php?delete=<?php echo $product['id']; ?>"><span class="glyphicon glyphicon-remove"></span></a>
             </td>
             <td><?php echo $product['title']; ?></td>
+            <td><?php echo $product['price']; ?> &euro;</td>
             <td><?php echo $category; ?></td>
             <td>
                 <a class="btn btn-xs btn-default" href="products.php?featured=<?php echo (($product['featured'] == 0)?'1' : '0'); ?>&id=<?php echo $product['id']; ?>"><span class="glyphicon glyphicon-<?php echo (($product['featured'] == 1)?'minus': 'plus'); ?>"></span></a>&nbsp; <?php echo (($product['featured'] == 1)?'Featured Product' : 'Add to Featured Products'); ?>

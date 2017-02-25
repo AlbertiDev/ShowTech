@@ -34,6 +34,7 @@
 							<h4>Details</h4>
 							<p><?php echo nl2br($product['description']); ?></p>
 							<hr>
+							<p>Price: <?php echo $product['price']; ?> &euro;</p>
 							<p>Brand: <?php echo $producti['brand']; ?></p>
 
 							<hr>
