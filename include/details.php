@@ -10,6 +10,7 @@
 	$ress = $db->query($sql);
 	$producti = mysqli_fetch_assoc($ress);
 	$sizestr = $product['sizes'];
+	$sizestr = rtrim($sizestr,',');
 	$size_array = explode(',', $sizestr);
 ?>
 

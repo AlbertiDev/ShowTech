@@ -1866,6 +1866,11 @@ img.same {
 	padding-bottom: 7px;
 }
 
+.saved-image img{
+	width: 185px;
+	height: 207px;
+}
+
 /*#btn-add-prod{
 	margin-top: -35px;
 }*/
