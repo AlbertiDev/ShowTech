@@ -92,7 +92,7 @@ if (isset($_POST['add_submit'])) {
             </form>
         </div>
         <hr>
-        <table class="table table-bordered table-hover table-responsive">
+        <table class="table  table-striped table-bordered table-hover table-responsive">
             <thead>
                 <tr>
                     <th>
