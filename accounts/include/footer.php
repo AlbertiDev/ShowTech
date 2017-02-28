@@ -29,7 +29,9 @@
      error: function(){alert("Something went wrong with the child options!");},
    });
   }
-  jQuery('select[name="parent"]').change(get_child_options);
+  jQuery('select[name="parent"]').change(function () {
+    get_child_options();
+  });
  </script>
 
 </body>

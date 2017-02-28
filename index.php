@@ -8,7 +8,7 @@
 
 <!-- include header banner-->
 <?php include 'include/header.php';  include 'include/banner.php'; 
-		$sql = "SELECT * FROM products WHERE featured = 1";
+		$sql = "SELECT * FROM products WHERE featured = 1 AND deleted = 0";
 		$featuredp = $db->query($sql);
 ?>
 <!--//header banner-->
