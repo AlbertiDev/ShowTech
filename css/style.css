@@ -611,7 +611,7 @@ a.forgot {
 	padding-bottom: 0.2em;
 	display: block;
 }
-.register-top-grid input[type="text"], .register-bottom-grid input[type="text"] {
+.register-top-grid input[type="text"], .register-bottom-grid input[type="text"], .register-bottom-grid input[type="password"]{
 	border: 1px solid #EEE;
 	outline-color:#52D0C4;
 	width: 100%;
@@ -1885,3 +1885,8 @@ img.same {
     background-color: #000;    
 }
 */
+
+.mt-lg {
+    margin-top: 30px;
+}
+

@@ -32,6 +32,22 @@
   jQuery('select[name="parent"]').change(function () {
     get_child_options();
   });
+
+  function detailsmodal(id){
+    var data = {"id":id};
+    jQuery.ajax({
+      url : '/showtech/accounts/include/details.php',
+      method : "post",
+      data : data,
+      success : function (data) {
+        jQuery('body').append(data);
+        jQuery('#details-us').modal('toggle');
+      },
+      error : function () {
+        alert("error 404");
+      }
+    });
+  }
  </script>
 
 </body>

@@ -64,7 +64,7 @@ if (isset($_POST['add_submit'])) {
             Brands
         </h1>
         <!-- form inline for brands -->
-        <div class="text-center">
+        <div class="text-center mation">
             <form class="form-inline" action="brands.php
 <?=((isset($_GET['edit']))?'?edit='.$edit_id:'');?>" method="post">
                 <fieldset>

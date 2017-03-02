@@ -1,13 +1,13 @@
 <!-- include head scripts -->
 <?php
-	require_once 'assets/conn.php';
+	require_once '../assets/conn.php';
 	include 'include/head.php'; include 'include/scripts.php'; ?>
 <!-- //head scripts -->
 
 <!-- body -->
 
 <!-- include header banner-->
-<?php include 'include/header.php';  include 'include/menu.php'; include 'include/banner.php'; 
+<?php include 'include/header.php'; 
 		$sql = "SELECT * FROM products WHERE featured = 1 AND deleted = 0";
 		$featuredp = $db->query($sql);
 ?>
@@ -17,7 +17,7 @@
 <div class="content">
 	<div class="container">
 		<div class="content-top">
-			<h1>Featured Products</h1>
+			<h1>View Products</h1>
 			<div class="content-top1">
 				<?php while ($product = mysqli_fetch_assoc($featuredp)): ?>
 					<div class="col-md-3 col-md2">
