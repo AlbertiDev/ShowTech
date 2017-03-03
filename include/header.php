@@ -11,7 +11,7 @@
 						<span>or</span><a  href="register.php" >Register</a></p>
 					<div class="cart box_1">
 						<a href="checkout.php">
-						<h3>€0.00<div class="total">
+						<h3>0.00 €<div class="total">
 							<span class="simpleCart_total"></span></div>
 							<img src="images/cart.png" alt="cart"/></h3>
 						</a>

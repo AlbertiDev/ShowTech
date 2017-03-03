@@ -568,7 +568,7 @@ p.footer-class a:hover{
 .word-in{
 	margin: 0.5em 0 0;
 }
-.login-right input[type="text"] {
+.login-right input[type="text"], .login-right input[type="email"],.login-right input[type="password"] {
 	border: 1px solid #bbb;
 	outline-color:#52D0C4;
 	width: 96%;
@@ -611,7 +611,7 @@ a.forgot {
 	padding-bottom: 0.2em;
 	display: block;
 }
-.register-top-grid input[type="text"], .register-bottom-grid input[type="text"], .register-bottom-grid input[type="password"]{
+.register-top-grid input[type="text"], .register-top-grid input[type="email"], .register-bottom-grid input[type="password"]{
 	border: 1px solid #EEE;
 	outline-color:#52D0C4;
 	width: 100%;

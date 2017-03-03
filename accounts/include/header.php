@@ -8,7 +8,7 @@
 				</div>
 			<div class="col-sm-4 header-left">		
 					<p class="log"><a href="account.php">Admin</a>
-						<span>or</span><a  href="account.php"  >Log Out</a></p>
+						<span>or</span><a  href="logout.php"  >Log Out</a></p>
 					<!-- <div class="cart box_1">
 						<a href="checkout.php">
 						<h3>$0.00<div class="total">

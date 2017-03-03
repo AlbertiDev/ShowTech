@@ -1,19 +1,19 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/showtech/assets/conn.php';
 include 'include/head.php'; include 'include/scripts.php'; 
-include 'include/header.php';   include 'include/menu.php';?>
+include 'include/header.php'; ?>
 <div class="container">
 	<div class="register">
-		<h1>Register</h1>
+		<h1>Account</h1>
 		  	  <form action="" method="post"> 
 				 <div class="col-md-6  register-top-grid">
 					
 					<div class="mation">
 						<span>Full Name</span>
-						<input type="text"> 
+						<input type="text" readonly> 
 					 
 						 <span>Email Address</span>
-						 <input type="email"> 
+						 <input type="email" readonly> 
 					</div>
 					 <div class="clearfix"> </div>
 					   <!-- <a class="news-letter" href="#">
@@ -34,9 +34,10 @@ include 'include/header.php';   include 'include/menu.php';?>
 				
 				<div class="register-but">
 				   <form>
-					   <input type="submit" value="submit" style="text-transform: uppercase">
+					   <input type="submit" value="Edit Account">
 					   <div class="clearfix"> </div>
-				   </form>
+				   </form> 
+
 				</div>
 		   </div>
 </div>
