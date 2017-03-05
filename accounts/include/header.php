@@ -4,10 +4,10 @@
 				<div class="col-sm-4 logo">
 					<a href="index.php"><img src="../images/logo.png" alt=""></a>	
 				</div>
-			<div class="col-sm-4 logo">
+			<div class="col-sm-3 logo">
 				</div>
-			<div class="col-sm-4 header-left">		
-					<p class="log"><a href="account.php">Admin</a>
+			<div class="col-sm-5 header-left">		
+					<p class="log pull-right"><a href="account.php"><?= $AdmUsr['full_name'];?></a>
 						<span>or</span><a  href="logout.php"  >Log Out</a></p>
 					<!-- <div class="cart box_1">
 						<a href="checkout.php">

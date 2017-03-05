@@ -1,7 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/showtech/assets/conn.php';
 include 'include/head.php'; include 'include/scripts.php'; 
-include 'include/header.php';   include 'include/menu.php'; 
+include 'include/header.php';
 
 $email = ((isset($_POST['email']))?sanitaze($_POST['email']):'');
 $password = ((isset($_POST['password']))?sanitaze($_POST['password']):'');
@@ -46,10 +46,13 @@ if ($_POST) {
 		echo display_errors($errors);
 	}else{
 		// user log  in
-		echo 'user log  in';
+		$user_id = $user['id'];
+		login($user_id);
 	}
 }
 ?>
+</div>
+</div>
 <div class="account">
 	<div class="container">
 		<h1>Login</h1>

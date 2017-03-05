@@ -1,7 +1,9 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/showtech/assets/conn.php';
 include 'include/head.php'; include 'include/scripts.php'; 
-include 'include/header.php';   include 'include/menu.php';?>
+include 'include/header.php';?>
+</div>
+</div>
 <div class="container">
 	<div class="register">
 		<h1>Register</h1>

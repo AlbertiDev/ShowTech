@@ -10,10 +10,10 @@ include 'include/header.php'; ?>
 					
 					<div class="mation">
 						<span>Full Name</span>
-						<input type="text" readonly> 
+						<input type="text" value="<?= $AdmUsr['full_name'];?>" readonly> 
 					 
 						 <span>Email Address</span>
-						 <input type="email" readonly> 
+						 <input type="email" value="<?= $AdmUsr['email'];?>" readonly> 
 					</div>
 					 <div class="clearfix"> </div>
 					   <!-- <a class="news-letter" href="#">
@@ -23,10 +23,10 @@ include 'include/header.php'; ?>
 				     <div class=" col-md-6 register-bottom-grid">
 						   
 							<div class="mation">
-								<span>Password</span>
-								<input type="password">
-								<span>Confirm Password</span>
-								<input type="password">
+								<span>New Password</span>
+								<input type="password" name="password1" id="password1">
+								<span>Confirm New Password</span>
+								<input type="password" name="password2" id="password2">
 							</div>
 					 </div>
 					 <div class="clearfix"> </div>

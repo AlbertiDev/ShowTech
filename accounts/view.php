@@ -1,6 +1,9 @@
 <!-- include head scripts -->
 <?php
 	require_once '../assets/conn.php';
+	if (!is_logged_in()) {
+		login_error_ridirect();
+	}
 	include 'include/head.php'; include 'include/scripts.php'; ?>
 <!-- //head scripts -->
 
@@ -10,9 +13,9 @@
 <?php include 'include/header.php'; 
 		$sql = "SELECT * FROM products WHERE featured = 1 AND deleted = 0";
 		$featuredp = $db->query($sql);
-?>
-<!--//header banner-->
 
+		/*echo $_SESSION['User'];*/
+?>
 <!--content-->
 <div class="content">
 	<div class="container">
