@@ -1,8 +1,10 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/showtech/assets/conn.php';
 include 'include/head.php'; include 'include/scripts.php'; 
-include 'include/header.php';
-
+include 'include/header.php';?>
+</div>
+</div>
+<?php
 $email = ((isset($_POST['email']))?sanitaze($_POST['email']):'');
 $password = ((isset($_POST['password']))?sanitaze($_POST['password']):'');
 $email = trim($email);
@@ -51,8 +53,7 @@ if ($_POST) {
 	}
 }
 ?>
-</div>
-</div>
+
 <div class="account">
 	<div class="container">
 		<h1>Login</h1>
@@ -81,4 +82,6 @@ if ($_POST) {
 	</div>
 </div>
 
+</div>
+</div>
 <?php include 'include/footer.php';?>

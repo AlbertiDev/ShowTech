@@ -30,7 +30,20 @@ function is_logged_in(){
 
 function login_error_ridirect($url = '/showtech/login.php'){
 	$_SESSION['error_flash'] = 'You must be logged in to access that page!';
-	header("location: '$url'");
+	header("location: $url");
+}
+
+function has_permissions($permission = 'admin'){
+	global $AdmUsr;
+	$permissions = explode(',', $AdmUsr['permissions']);
+	if (in_array($permission, $permissions)) {
+		return true;
+	} return false;
+}
+
+function permission_error_ridirect($url = 'view.php'){
+	$_SESSION['error_flash'] = 'You do not have permission to access that page!';
+	header("location: $url");
 }
 
 /*showtech/*/

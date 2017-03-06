@@ -1,7 +1,10 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/showtech/assets/conn.php';
+if (!is_logged_in()) {
+    login_error_ridirect();
+  }
 include 'include/head.php'; include 'include/scripts.php'; 
-include 'include/header.php';
+include 'include/header.php';  include 'include/menu.php';
 
 //Delete Product
 if(isset($_GET['delete'])){

@@ -1,11 +1,14 @@
 <!-- include head scripts -->
 <?php
 require_once '../assets/conn.php';
+if (!is_logged_in()) {
+        login_error_ridirect();
+    }
 include 'include/head.php'; include 'include/scripts.php'; 
 /*//head scripts*/
 /*body*/ 
 /*include header banner*/
-include 'include/header.php';
+include 'include/header.php'; include 'include/menu.php';
 /*get brends forn DB*/
 $sql = "SELECT * FROM brand ORDER BY brand ASC";
 $res = $db->query($sql);

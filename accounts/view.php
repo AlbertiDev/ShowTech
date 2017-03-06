@@ -4,17 +4,18 @@
 	if (!is_logged_in()) {
 		login_error_ridirect();
 	}
+	
 	include 'include/head.php'; include 'include/scripts.php'; ?>
 <!-- //head scripts -->
 
 <!-- body -->
 
 <!-- include header banner-->
-<?php include 'include/header.php'; 
+<?php include 'include/header.php'; include 'include/menu.php'; 
 		$sql = "SELECT * FROM products WHERE featured = 1 AND deleted = 0";
 		$featuredp = $db->query($sql);
 
-		/*echo $_SESSION['User'];*/
+		echo $_SESSION['User'];
 ?>
 <!--content-->
 <div class="content">

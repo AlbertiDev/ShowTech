@@ -7,15 +7,15 @@ include 'include/header.php';?>
 <div class="container">
 	<div class="register">
 		<h1>Register</h1>
-		  	  <form action="" method="post"> 
+		  	  <form action="register.php" method="post"> 
 				 <div class="col-md-6  register-top-grid">
 					
 					<div class="mation">
 						<span>Full Name</span>
-						<input type="text"> 
+						<input type="text" name="full_name" id="full_name"> 
 					 
 						 <span>Email Address</span>
-						 <input type="email"> 
+						 <input type="email" name="email" id="email"> 
 					</div>
 					 <div class="clearfix"> </div>
 					   <!-- <a class="news-letter" href="#">
@@ -26,21 +26,23 @@ include 'include/header.php';?>
 						   
 							<div class="mation">
 								<span>Password</span>
-								<input type="password">
+								<input type="password" name="password1" id="password1">
 								<span>Confirm Password</span>
-								<input type="password">
+								<input type="password" name="password2" id="password2">
 							</div>
 					 </div>
 					 <div class="clearfix"> </div>
-				</form>
 				
 				<div class="register-but">
-				   <form>
+				   
 					   <input type="submit" value="submit" style="text-transform: uppercase">
 					   <div class="clearfix"> </div>
-				   </form>
+				   
 				</div>
+				</form>
 		   </div>
 </div>
 
+</div>
+</div>
 <?php include 'include/footer.php';?>
