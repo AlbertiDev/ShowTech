@@ -33,7 +33,7 @@ function login_error_ridirect($url = '/showtech/login.php'){
 	header("location: $url");
 }
 
-function has_permissions($permission = 'admin'){
+function has_permissions($permission = 'editor'){
 	global $AdmUsr;
 	$permissions = explode(',', $AdmUsr['permissions']);
 	if (in_array($permission, $permissions)) {
