@@ -3,9 +3,12 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/showtech/assets/conn.php';
 if (!is_logged_in()) {
     login_error_ridirect();
   }
+  if (!has_permissions('editor')) {
+    permission_error_ridirect('index.php');
+  }
 include 'include/head.php'; include 'include/scripts.php'; 
 include 'include/header.php';  include 'include/menu.php';
-
+$usr_id = $AdmUsr['id'];
 //Delete Product
 if(isset($_GET['delete'])){
   $id = sanitaze($_GET['delete']);
@@ -30,7 +33,7 @@ $sizes = rtrim($sizes,',');
 $saved_image = '';
 if(isset($_GET['edit'])){
   $edit_id = (int)$_GET['edit'];
-  $productResults = $db->query("SELECT * FROM products WHERE id = '$edit_id'");
+  $productResults = $db->query("SELECT * FROM products WHERE user = '$usr_id' AND id = '$edit_id'");
   $product = mysqli_fetch_assoc($productResults);
   if(isset($_GET['delete_image'])){
     $imgi = (int)$_GET['imgi'] - 1;
@@ -127,8 +130,8 @@ if ($_POST) {
         move_uploaded_file($tmpLoc[$i],$uploadPath[$i]);
       }
     }
-    $insertSql = "INSERT INTO products (`title`,`price`,`list_price`,`brand`,`categories`,`sizes`,`image`,`description`)
-     VALUES ('$title','$price', '$list_price', '$brand', '$category','$sizes','$dbpath','$description')";
+    $insertSql = "INSERT INTO products (`title`,`price`,`list_price`,`brand`,`categories`,`sizes`,`image`,`description`,`user`)
+     VALUES ('$title','$price', '$list_price', '$brand', '$category','$sizes','$dbpath','$description','$usr_id')";
      if(isset($_GET['edit'])){
        $insertSql = "UPDATE products SET `title` = '$title', `price` = '$price', `list_price` = '$list_price',
        `brand` = '$brand', `categories` = '$category', `sizes` = '$sizes', `image` = '$dbpath', `description` = '$description'
@@ -253,7 +256,7 @@ if ($_POST) {
 </div>
 
 <?php }else{
-$sql = "SELECT * FROM products WHERE deleted = 0 ORDER BY categories";
+$sql = "SELECT * FROM products WHERE user = '$usr_id' AND deleted = 0 ORDER BY categories";
 $presults = $db->query($sql);
 if (isset($_GET['featured'])) {
   $id = (int)$_GET['id'];
@@ -274,7 +277,7 @@ if (isset($_GET['featured'])) {
         </div>
         <hr>
         <table class="table table-hover table-bordered table-condensed table-striped">
-  <thead><th>Edit / Delete</th><th>Product</th><th>Price</th><th>Category</th><th>Featured</th><th>Sold</th></thead>
+  <thead><th>Product</th><th>Price</th><th>Category</th><th>Featured</th><th>Edit / Delete</th><!-- <th>Sold</th> --></thead>
   <tbody>
     <?php while($product = mysqli_fetch_assoc($presults)):
         $childID = $product['categories'];
@@ -288,18 +291,18 @@ if (isset($_GET['featured'])) {
         $category = $parent['category'].'~'.$child['category'];
       ?>
       <tr>
-        <td>
-          <a href="products.php?edit=<?=$product['id'];?>" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-pencil"></span></a> / 
-          <a href="products.php?delete=<?=$product['id'];?>" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
-
-        </td>
         <td><?=$product['title'];?></td>
         <td><?=$product['price'];?> €</td>
         <td><?=$category;?></td>
         <td><a href="products.php?featured=<?=(($product['featured'] == 0)?'1':'0');?>&id=<?=$product['id'];?>" class="btn btn-xs btn-default">
           <span class="glyphicon glyphicon-<?=(($product['featured']==1)?'minus':'plus');?>"></span>
           </a>&nbsp <?=(($product['featured'] == 1)?'Featured Product':'Add To Featured Products');?></td>
-        <td>0</td>
+        <td>
+          <a href="products.php?edit=<?=$product['id'];?>" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-pencil"></span></a> / 
+          <a href="products.php?delete=<?=$product['id'];?>" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+
+        </td>
+        <!-- <td>0</td> -->
       </tr>
     <?php endwhile; ?>
   </tbody>

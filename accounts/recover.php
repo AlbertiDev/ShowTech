@@ -3,17 +3,21 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/showtech/assets/conn.php';
 if (!is_logged_in()) {
     login_error_ridirect();
   }
+  if (!has_permissions('editor')) {
+    permission_error_ridirect('index.php');
+  }
 include 'include/head.php'; include 'include/scripts.php'; 
 include 'include/header.php';  include 'include/menu.php';
-
+$usr_id = $AdmUsr['id'];
 //Recover Products
-if(isset($_GET['recover'])){
-  $id = sanitaze($_GET['recover']);
-  $db->query("UPDATE products SET deleted = 0 WHERE id = '$id'");
+if(isset($_GET['recover']) && !empty($_GET['recover'])){
+  $id = (int)($_GET['recover']);
+  $id = sanitaze($id);
+  $db->query("UPDATE products SET deleted = 0 WHERE user = '$usr_id' AND id = '$id'");
   header('Location: products.php');
 }
 
-$sql = "SELECT * FROM products WHERE deleted = 1 ORDER BY categories";
+$sql = "SELECT * FROM products WHERE user = '$usr_id' AND deleted = 1 ORDER BY categories";
 $presults = $db->query($sql);
  ?>
 
@@ -24,7 +28,7 @@ $presults = $db->query($sql);
         </h1>
         
         <table class="table table-hover table-bordered table-condensed table-striped">
-  <thead><th>Recover</th><th>Product</th><th>Price</th><th>Category</th><th>Sold</th></thead>
+  <thead><th>Recover</th><th>Product</th><th>Price</th><th>Category</th><!-- <th>Sold</th> --></thead>
   <tbody>
     <?php while($product = mysqli_fetch_assoc($presults)):
         $childID = $product['categories'];
@@ -45,7 +49,7 @@ $presults = $db->query($sql);
         <td><?=$product['title'];?></td>
         <td><?=$product['price'];?> €</td>
         <td><?=$category;?></td>        
-        <td>0</td>
+        <!-- <td>0</td> -->
       </tr>
     <?php endwhile; ?>
   </tbody>

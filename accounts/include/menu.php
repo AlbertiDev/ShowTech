@@ -3,10 +3,12 @@
 							  <li><a class="color6" href="view.php">View</a></li>						 		    				
 							  <li><a class="color6" href="brands.php">Brands</a></li>
 							  <li><a class="color6" href="categories.php">Categories</a></li>
-							  <li><a class="color6" href="products.php">Products</a></li>
-							  <li><a class="color6" href="recover.php">Recover</a></li>
+							  <?php if (has_permissions('editor')):?>
+							  	<li><a class="color6" href="products.php">Products</a></li>
+							  	<li><a class="color6" href="recover.php">Recover</a></li>
+							  <?php endif; ?>	
 							  <?php if (has_permissions('admin')):?>
-							  <li><a class="color6"  href="users.php">Users</a></li>						 		    				
+							  	<li><a class="color6"  href="users.php">Users</a></li>						 		    				
 							  <?php endif; ?>	
 					  	</ul> 
 </div>

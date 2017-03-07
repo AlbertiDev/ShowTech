@@ -12,10 +12,15 @@
 
 <!-- include header banner-->
 <?php include 'include/header.php'; include 'include/menu.php'; 
-		$sql = "SELECT * FROM products WHERE featured = 1 AND deleted = 0";
+		$usr_id = $AdmUsr['id'];
+		if (has_permissions('admin')) {
+			$sql = "SELECT * FROM products WHERE deleted = 0";
+		}else{
+			$sql = "SELECT * FROM products WHERE user = '$usr_id' AND deleted = 0";			
+		}
 		$featuredp = $db->query($sql);
 
-		echo $_SESSION['User'];
+		//echo $_SESSION['User'];
 ?>
 <!--content-->
 <div class="content">
