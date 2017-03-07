@@ -13,7 +13,7 @@
 	
 	$usr_id = $AdmUsr['id'];
 	
-	//delete categories
+	//delete users
 	if (isset($_GET['delete']) && !empty($_GET['delete'])) {
 	    $del_id = (int)$_GET['delete'];
 	    $del_id = sanitaze($del_id);	    
