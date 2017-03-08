@@ -78,17 +78,18 @@ if (!empty($sizes)) {
 if ($_POST) {
   $errors= array();
   $required = array('title', 'brand', 'price', 'parent', 'child', 'sizes');
-  $allowed = array('png','jpg','jpeg','PNG','JPG','JPEG');
-  $photoName = array();
-  $tmpLoc = array();
-  $uploadPath = array();
-  $uploadName = array();
   foreach($required as $field){
     if($_POST[$field] == ''){
       $errors[] = 'All Fields With and Astrisk are required.';
       break;
     }
   }
+  if(!empty($_FILES)){
+  $allowed = array('png','jpg','jpeg','PNG','JPG','JPEG');
+  $photoName = array();
+  $tmpLoc = array();
+  $uploadPath = array();
+  $uploadName = array();
   $photoCount = count($_FILES['photo']['name']);
    if ($photoCount > 0) {
      for($i=0;$i<$photoCount;$i++){
@@ -128,8 +129,10 @@ if ($_POST) {
     //upload file and insert into database
       for($i=0;$i<$photoCount;$i++){
         move_uploaded_file($tmpLoc[$i],$uploadPath[$i]);
-      }
-    }
+			}
+		}
+	}
+  }
     $insertSql = "INSERT INTO products (`title`,`price`,`list_price`,`brand`,`categories`,`sizes`,`image`,`description`,`user`)
      VALUES ('$title','$price', '$list_price', '$brand', '$category','$sizes','$dbpath','$description','$usr_id')";
      if(isset($_GET['edit'])){
@@ -140,7 +143,6 @@ if ($_POST) {
 
      $db->query($insertSql);
      header('Location: products.php');
-  }
 }
 
 ?>

@@ -41,14 +41,14 @@
 							
 							<form action="add_cart.php" method="post">
 								<div class="row">
-									<div class="col-sm-3">
+									<div class="col-sm-12">
 										<div class="form-group">
 											<label for="quantity">Quantity:</label>
-											<input class="form-control" id="quantity" type="text" name="quantity">
+											<input class="form-control" id="quantity" type="number" min="0" name="quantity">
 										</div>
 									</div>
-
-									<div class="col-sm-9">
+									<br><br>
+									<div class="col-sm-12">
 										<div class="form-group">
 											<label for="size">Size:</label>
 											<select name="size" class="form-control" id="size">

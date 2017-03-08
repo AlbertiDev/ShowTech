@@ -17,7 +17,7 @@ $rez = $db->query($sql);
 											<div class="h_nav">
 											 <?php while ($parentsm = mysqli_fetch_assoc($rez2)) : ?>									
 												<ul>
-													<li><a href="products.php?prod=<?=$parentsm['id'];?>"><?=$parentsm['category'];?></a></li>																						
+													<li><a href="products.php?prod=<?=$parentsm['id'];?>&prnt=<?= $parent['category']; ?>&cld=<?=$parentsm['category'];?>"><?=$parentsm['category'];?></a></li>																						
 												</ul>
 											<?php endwhile; ?>	
 											</div>							

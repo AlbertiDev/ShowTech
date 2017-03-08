@@ -10,9 +10,13 @@
 <?php include 'include/header.php';  include 'include/menu.php';
 	if (isset($_GET['prod'])) {
 		$id = $_GET['prod'];
-		$id = (integer) $id;
+		$id = (int) $id;
 		$sql = "SELECT * FROM products WHERE categories = '$id' AND deleted = 0";
 		$featuredp = $db->query($sql);
+	}
+	if (isset($_GET['prnt']) && isset($_GET['cld'])) {
+		$prnt = sanitaze($_GET['prnt']);
+		$cld = sanitaze($_GET['cld']);
 	}
 ?>
 <!--//header banner-->
@@ -21,7 +25,7 @@
 <div class="content">
 	<div class="container">
 		<div class="content-top">
-			<h1>Products</h1>
+			<h1><?= ((isset($_GET['prnt']) && isset($_GET['cld']))?$prnt.'~'.$cld:'Products'); ?></h1>
 			<div class="content-top1">
 				<?php while ($product = mysqli_fetch_assoc($featuredp)): ?>
 					<div class="col-md-3 col-md2">
