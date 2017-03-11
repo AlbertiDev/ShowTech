@@ -1,7 +1,7 @@
 <?php $sql = "SELECT * FROM categories WHERE parent = 0";
 $rez = $db->query($sql);
 ?>
-<div class="col-sm-10 h_menu4">
+<div class="col-sm-8 h_menu4">
 					<ul class="memenu skyblue">
 						  <li class=" grid"><a  href="index.php">Home</a></li>
 						  <?php while ($parent = mysqli_fetch_assoc($rez)) : ?>
@@ -26,27 +26,34 @@ $rez = $db->query($sql);
 								</div>
 						</li>
 						<?php endwhile; ?>					    				
-					<li><a class="color6" href="contact.php">Contact</a></li>
+					<!-- <li><a class="color6" href="contact.php">Contact</a></li> -->
 				  </ul> 
 				</div>
+				<div id="search" class="col-sm-4 pull-left">
+					  <form action="search.php" method="post" id="custom-search-form" class="form-search form-horizontal pull-right" >
+	                	<div class="input-append span12">
+	                    	<input type="text" id="search" name="search" class="search-query" placeholder="Search">
+	                    	<button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
+	                	</div>
+	            	</form>
+        		</div>			    	
 
-
-				<div class="col-sm-2 search">		
-			<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a>
-		</div>
+				
 		<div class="clearfix"> </div>
-			<!---pop-up-box-->
-					     
-					<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+			<!---pop-up-box
+					   <div class="col-sm-2 search">		
+			<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a>
+		</div>  -->
+					<!--<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>-->
+					<!--<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
 					<!---//pop-up-box-->
-				<div id="small-dialog" class="mfp-hide">
+				<!--<div id="small-dialog" class="mfp-hide">
 				<div class="search-top">
 						<div class="login">
 							<input type="submit" value="">
 							<input type="text" value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">		
 						</div>
-						<p>	Shopping</p>
+						<p>	Search</p>
 					</div>				
 				</div>
 				 <script>
@@ -64,7 +71,7 @@ $rez = $db->query($sql);
 						});
 																						
 						});
-				</script>			
+				</script>-->			
 	<!---->		
 		</div>
 	</div>
