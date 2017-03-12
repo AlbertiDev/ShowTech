@@ -83,7 +83,7 @@ if ($_POST) {
 <div class="container">
 	<div class="register">
 		<h1>Register</h1>
-		  	  <form action="register.php" method="post"> 
+		  	  <form action="register.php" method="post" autocomplete="off"> 
 				 <div class="col-md-6  register-top-grid">
 					
 					<div class="mation">

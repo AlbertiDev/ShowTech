@@ -123,7 +123,7 @@ if (isset($_GET['edit']) && !empty($_GET['edit'])) {
         	</div>
 
         	<div class="col-md-6">
-        		<table class="table table-bordered table-hover table-responsive">
+        		<table class="table table-hover table-bordered table-condensed table-striped">
 					<thead>
 						<tr>
 							<th>
@@ -157,7 +157,7 @@ if (isset($_GET['edit']) && !empty($_GET['edit'])) {
 							</td>
 						</tr>
 						<?php while ($child = mysqli_fetch_assoc($resc)):?>
-							<tr class="bg-warning">
+							<tr>
 								<td>
 									<?= $child['category']; ?>
 								</td>

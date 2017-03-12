@@ -71,7 +71,7 @@
 				<br>
 				<div class="modal-footer">
 					<button class="btn btn-default"  onclick="clsModal();return false;">Close</button>
-					<button class="btn btn btn-warning" onclick="clsModal();return false;" ><span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart</button>
+					<button class="btn btn btn-success" onclick="clsModal();return false;" ><span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart</button>
 				</div>
 		</div>
 	</div>	
