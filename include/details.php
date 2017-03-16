@@ -26,6 +26,7 @@
 				<div class="modal-body">
 					<div class="container-fluid">
 						<div class="row">
+							<span id="modal_errors" classe="bg-danger"></span><br>
 							<div class="col-sm-6">
 								<div class="center-block">
 									<img src="<?= $product['image']; ?>" alt="<?= $product['title']; ?>" class="details img-responsive">
@@ -40,7 +41,9 @@
 
 							<hr>
 							
-							<form action="add_cart.php" method="post">
+							<form action="add_to_cart.php" method="post" id="add_product_form">
+								<input id="product_id" name="product_id" value="<?= $id; ?>" type="hidden">
+								<input id="available" name="available" value="" type="hidden">
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="form-group">
@@ -57,8 +60,8 @@
 												<?php foreach($size_array as $string) {
 													$string_array = explode(':', $string);
 													$size = $string_array[0];
-													$quantity = $string_array[1];
-													echo '<option value="'.$size.'">'.$size.' ('.$quantity.' Available)</option>';
+													$available = $string_array[1];
+													echo '<option value="'.$size.'" data-available="'.$available.'">'.$size.' ('.$available.' Available)</option>';
 												} ?>
 											</select>
 										</div>
@@ -72,12 +75,17 @@
 				<br>
 				<div class="modal-footer">
 					<button class="btn btn-default"  onclick="clsModal();return false;">Close</button>
-					<button class="btn btn btn-warning" type="submit"><span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart</button>
+					<button class="btn btn btn-success" onclick="add_to_cart();return false;"><span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart</button>
 				</div>
 		</div>
 	</div>	
 </div>
 <script>
+	jQuery('#size').change(function(){
+		var available = jQuery('#size option:selected').data("available");
+		jQuery('#available').val(available);
+	});
+
 	function clsModal() {
 		jQuery('#details-md').modal('hide');
 		setTimeout(function(){

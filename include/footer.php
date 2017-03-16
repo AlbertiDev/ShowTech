@@ -22,6 +22,36 @@
 			}
 		});
 	}
+
+	function add_to_cart() {
+		jQuery('#modal_errors').html("");
+		var size = jQuery('#size').val();
+		var quantity = jQuery('#quantity').val();
+		var available = jQuery('#available').val();
+		var error = '';
+		var data = jQuery('#add_product_form').serialize();
+		if (size == '' || quantity == '' || quantity == 0) {
+			error += '<p class="text-danger text-center">You most choose size and quantity.</p>';
+			jQuery('#modal_errors').html(error);
+			return;
+		}else if(quantity > available){
+			error += '<p class="text-danger text-center">There are only '+available+' available</p>';
+			jQuery('#modal_errors').html(error);
+			return;
+		}else{
+			jQuery.ajax({
+			url : '/showtech/include/add_to_cart.php',
+			method : "post",
+			data : data,
+			success : function () {
+				location.reload();
+			},
+			error : function () {
+				alert("error 404");
+			}
+		});
+		}
+	}
 </script>
 
 </body>
