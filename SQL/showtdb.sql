@@ -167,9 +167,10 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
+-- password is 123456 for users in this table
 INSERT INTO `users` (`id`, `full_name`, `email`, `password`, `date`, `last_login`, `permissions`) VALUES
-(1, 'Administrator', 'admin@root.com', '$2y$10$ehJjLevZF4S9DHRcDHzTU.ktJo/dXmpXyShObNnamkTwx0UfWfNKK', '2017-03-03 13:13:37', '2017-07-18 21:54:38', 'admin,editor'),
-(2, 'User', 'user@usr.com', '$2y$10$5mnROqmoYsq35v62vU1zieOvCyu0Evt9PRCaw2PxjEe0KawGu0L0e', '2017-03-06 18:26:35', '2017-03-08 16:56:54', 'editor,');
+(1, 'Administrator', 'admin@root.com', '$2y$10$Wd.G0/B6TxrMmvQJzbzOe.sx4hCuju22NDv.zwuPyVkP8ZmFafJ4e', '2017-03-03 13:13:37', '2017-07-18 21:54:38', 'admin,editor'),
+(2, 'User', 'user@usr.com', '$2y$10$Wd.G0/B6TxrMmvQJzbzOe.sx4hCuju22NDv.zwuPyVkP8ZmFafJ4e', '2017-03-06 18:26:35', '2017-03-08 16:56:54', 'editor,');
 
 --
 -- Indexes for dumped tables
